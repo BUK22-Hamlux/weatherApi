@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SkyCast | Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="weather-container">
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button onclick="getWeather()">Get Weather</button>
-        
-        <div id="display">
-            <h2 id="cityName"></h2>
-            <p id="temp"></p>
-            <p id="desc"></p>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name..." spellcheck="false">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="weather-card">
+            <div class="main-info">
+                <h1 id="cityName">London</h1>
+                <p id="description">Scattered Clouds</p>
+                <div class="temp-container">
+                    <span id="temp">22</span>°C
+                </div>
+            </div>
+
+            <div class="details-grid">
+                <div class="col">
+                    <p class="label">Humidity</p>
+                    <p class="value"><span id="humidity">64</span>%</p>
+                </div>
+                <div class="col">
+                    <p class="label">Wind Speed</p>
+                    <p class="value"><span id="wind">12</span> km/h</p>
+                </div>
+                <div class="col">
+                    <p class="label">Feels Like</p>
+                    <p class="value"><span id="feelsLike">20</span>°C</p>
+                </div>
+            </div>
         </div>
     </div>
-
-<script src="index.js"></script>
 </body>
 </html>
